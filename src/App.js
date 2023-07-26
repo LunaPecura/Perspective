@@ -34,6 +34,7 @@ function App() {
 		document.querySelector("h1").classList.remove("hidden");
 		document.querySelector(".startButton").classList.add("hidden");
 		document.querySelector(".previousButton").classList.remove("hidden")
+		document.querySelector("h2").classList.remove("hidden")
 	}
 
 	const titleInfo = {
