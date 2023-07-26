@@ -5,7 +5,7 @@ const BottomContainer = (props) => {
 
 	return (
 		<div className="BottomContainer">
-			<button className="previousButton hidden" onClick={props.nextFn}>
+			<button className="bigButton previousButton hidden" onClick={props.nextFn}>
 				Get Previous Astronomy Picture Of The Day</button>
 		</div>
 	)

@@ -35,6 +35,14 @@ function App() {
 		document.querySelector(".startButton").classList.add("hidden");
 		document.querySelector(".previousButton").classList.remove("hidden")
 		document.querySelector("h2").classList.remove("hidden")
+		document.querySelector(".linkDiv").classList.remove("hidden");
+	}
+
+	const viewGallery = () => {
+		document.querySelector(".Apod").classList.add("hidden");
+		document.querySelector(".Gallery").classList.remove("hidden");
+		document.querySelector(".previousButton").classList.add("hidden");
+		document.querySelector("h2").classList.add("hidden");
 	}
 
 	const titleInfo = {
@@ -43,9 +51,10 @@ function App() {
 	}
 
 
+
 	return (
 		<div className="App">
-			<TopContainer startFn={todaysApod} titleInfo={titleInfo} />
+			<TopContainer startFn={todaysApod} galleryFn={viewGallery} titleInfo={titleInfo} />
 			<MainContainer currentItem={currentItem} />
 			<BottomContainer nextFn={getNextItem} />
 		</div>
