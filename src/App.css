@@ -1,38 +1,80 @@
+* {
+	background-color: black;
+}
+
 .App {
-  text-align: center;
+	text-align: center;
+	background-color: black;
+	color: white;
+	height: fit-content;
+	padding-bottom: 100px;
+	/* border: solid turquoise; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.TopContainer {
+	border: solid purple;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.MainContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 5px;
+	border: solid plum;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.BottomContainer {
+	border: solid salmon;
 }
 
-.App-link {
-  color: #61dafb;
+.startButton {
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+	height: 50px;
+	width: 100%;
+	
+	font-family: 'Franklin Gothic Medium';
+	font-size: 25px;
+	padding: 10px;
+	border-radius: 10px;
+	margin-top: 1px;
+	border: solid darkslategray;
+	color: darkslategray;
+}
+
+button:hover {
+	background-color: darkslateblue;
+	border: solid teal;
+	color: lightgray;
+
+	/* border-color: teal;
+	color: teal; */
+}
+
+.imgContainer {
+	display: flex;
+	flex-direction: row;
+	width: fit-content;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	/* border: solid palegreen; */
+}
+
+.textDiv {
+	display: flex;
+	align-items: center;
+	font-family: 'Cambria';
+	font-size: 15px;
+	line-height: 25px;
+	font-style: italic;
+	padding: 25px;
+	width: 200px;
+	margin-right: 5px;
+	border-radius: 25px;
+	border: 1px solid teal;
+}
+
+.hidden {
+	display: none;
 }
