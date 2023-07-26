@@ -6,7 +6,7 @@ const MainContainer = (props) => {
 
 	return (
 		<div className="MainContainer" >
-			<Apod startFn={props.startFn} nextFn={props.nextFn} currentItem={props.currentItem} />
+			<Apod currentItem={props.currentItem} />
 		</div>
 	)
 }

@@ -7,8 +7,6 @@ const Apod = (props) => {
 				<div className="textDiv">{props.currentItem.explanation}</div>
 				<div className="imgDiv"><img src={props.currentItem.url}></img></div>
 			</div> 
-			<button className="previousButton hidden" onClick={props.nextFn}>
-				Get Previous Astronomy Picture Of The Day</button>
 		</div>
 	)
 }

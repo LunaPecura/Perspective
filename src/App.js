@@ -46,8 +46,8 @@ function App() {
 	return (
 		<div className="App">
 			<TopContainer startFn={todaysApod} titleInfo={titleInfo} />
-			<MainContainer nextFn={getNextItem} currentItem={currentItem} />
-			<BottomContainer />
+			<MainContainer currentItem={currentItem} />
+			<BottomContainer nextFn={getNextItem} />
 		</div>
 	);
 }
