@@ -34,6 +34,7 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	justify-content: space-evenly;
 }
 
 .littleImg {
@@ -124,6 +125,16 @@
 	padding-top: 25px;
 	padding-bottom: 25px;
 	width: 30%;
+}
+
+button:disabled {
+	color: gray;
+	background-color: black;
+}
+
+button:disabled:hover {
+	color: gray;
+	background-color: black;
 }
 
 .hidden {

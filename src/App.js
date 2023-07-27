@@ -46,20 +46,34 @@ function App() {
 	}
 
 	const todaysApod = () => {
+		getInitialItem();
 		document.querySelector(".imgContainer").classList.remove("hidden");
 		document.querySelector("h1").classList.remove("hidden");
 		document.querySelector(".startButton").classList.add("hidden");
 		document.querySelector(".previousButton").classList.remove("hidden")
 		document.querySelector("h2").classList.remove("hidden")
 		document.querySelector(".linkDiv").classList.remove("hidden");
+		document.querySelector(".Gallery").classList.add("hidden");
+		document.querySelector(".Apod").classList.remove("hidden");
+		document.querySelector(".littleButton.todaysApod").setAttribute('disabled', true)
+		document.querySelector(".littleButton.previousApod").removeAttribute('disabled')
+	}
+
+	const previousApod = () => {
+		getNextItem();
+		document.querySelector(".littleButton.todaysApod").removeAttribute('disabled');
 	}
 
 	const viewGallery = () => {
+		getRandomList();
 		document.querySelector(".Apod").classList.add("hidden");
 		document.querySelector(".Gallery").classList.remove("hidden");
 		document.querySelector(".previousButton").classList.add("hidden");
 		document.querySelector("h2").classList.add("hidden");
-		getRandomList();
+		document.querySelector(".littleButton.todaysApod").removeAttribute('disabled');
+		document.querySelector(".littleButton.previousApod").setAttribute('disabled', true)
+
+
 	}
 
 	const titleInfo = {
@@ -71,9 +85,9 @@ function App() {
 
 	return (
 		<div className="App">
-			<TopContainer startFn={todaysApod} nextFn={getNextItem} galleryFn={viewGallery} titleInfo={titleInfo} />
+			<TopContainer startFn={todaysApod} nextFn={previousApod} galleryFn={viewGallery} titleInfo={titleInfo} />
 			<MainContainer currentItem={currentItem} currentList={currentList}/>
-			<BottomContainer nextFn={getNextItem} />
+			<BottomContainer nextFn={previousApod} />
 		</div>
 	);
 }

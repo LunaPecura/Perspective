@@ -10,7 +10,8 @@ const TopContainer = (props) => {
 			<h2 className="hidden"><i>{`${props.titleInfo.title} (${props.titleInfo.date})`}</i></h2>
 			<div className="linkDiv hidden">
 				<span><button className="littleButton">Link</button></span>
-				<span><button className="littleButton" onClick={props.nextFn}>Previous Day's APOD</button></span>
+				<span><button className="littleButton previousApod" onClick={props.nextFn}>Previous Day's APOD</button></span>
+				<span><button className="littleButton todaysApod" onClick={props.startFn}>Today's APOD</button></span>
 				<span><button className="littleButton" onClick={props.galleryFn}>View Gallery</button></span>
 			</div>
 		</div>
