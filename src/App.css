@@ -21,10 +21,23 @@
 }
 
 .MainContainer {
+	border: solid plum;
+}
+
+.Apod {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	border: solid plum;
+}
+
+.Gallery {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.littleImg {
+	margin-bottom: 20px;
 }
 
 .BottomContainer {
@@ -51,19 +64,20 @@
 
 .littleButton {
 	height: 25px;
-	width: 100px;
+	width: fit-content;
 	background-color: black;
 	border: .2px solid gray;
 	color: lightgray;
 	border-radius: 5px;
 	margin: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .littleButton:hover {
 	background-color: darkslateblue;
 	color: white;
 }
-
 
 .imgContainer {
 	display: flex;
@@ -93,22 +107,23 @@
 	border: 1px solid darkred;
 }
 
-.sideBar {
-	font-family: 'Cambria';
-	font-size: 15px;
-	line-height: 25px;
-	font-style: italic;
-	padding: 25px;
-	width: 200px;
-	margin: 1px;
-	margin-right: 5px;
-	border: 1px solid teal;
-}
-
 .imgList {
 	margin: 1px;
 	margin-left: 5px;
-	border: 1px solid darkred;
+	border: 3px solid darkred;
+}
+
+.ListItem {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	border: solid pink;
+	border-radius: 25px;
+	margin: 5px;
+	padding: 5px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	width: 30%;
 }
 
 .hidden {

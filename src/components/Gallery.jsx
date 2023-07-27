@@ -1,12 +1,14 @@
 import React from 'react'
+import ListItem from './ListItem';
 
-const Gallery = () => {
+const Gallery = (props) => {
+
+	const list = props.currentList.filter(item => item.media_type === "image").map((item, index) => {
+		return <ListItem item={item} key={index} /> });
+
 	return (
-		<div className="Gallery hidden">
-			<div className="imgContainer hidden">
-				<div className="sideBar">{}</div>
-				<div className="imgList">{}</div>
-			</div> 
+		<div className="Gallery">
+			{list}
 		</div>
 	)
 }

@@ -8,7 +8,7 @@ const MainContainer = (props) => {
 	return (
 		<div className="MainContainer" >
 			<Apod currentItem={props.currentItem} />	{/* initially shown */}
-			<Gallery />									{/* initially hidden */}					
+			<Gallery currentList={props.currentList}/>	{/* initially hidden */}					
 		</div>
 	)
 }
